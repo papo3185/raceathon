@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Configuration</title>
+    <style>
+        /* Dark Theme Color Palette */
+        body {
+            background-color: #121212;
+            color: #E0E0E0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #FFD700;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        select {
+            background-color: #1E1E1E;
+            color: #E0E0E0;
+            border: 2px solid #FFD700;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        .disabled {
+            background-color: #444;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .parameters {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .parameters p {
+            margin-right: 30px;
+        }
+
+        button {
+            background-color: #FFD700;
+            color: #121212;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #FFC300;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1E1E1E;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .parameters p {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Car Configuration</h1>
+
+        <!-- Engine Options -->
+        <div class="section">
+            <h2>Engine</h2>
+            <select id="engineSelect">
+                <option value="">Select Engine</option>
+                <option value="V10">V10</option>
+                <option value="V8">V8</option>
+                <option value="I6">I6</option>
+                <option value="V6">V6</option>
+                <option value="I4">I4</option>
+                <option value="I3">I3</option>
+            </select>
+        </div>
+
+        <!-- Transmission Options -->
+        <div class="section">
+            <h2>Transmission</h2>
+            <select id="transmissionSelect">
+                <option value="">Select Transmission</option>
+                <option value="DCT">DCT</option>
+                <option value="CVT">CVT</option>
+                <option value="Torque Converter">Torque Converter</option>
+                <option value="Semi Automatic transmission">Semi Automatic transmission</option>
+                <option value="Manual Transmission">Manual Transmission</option>
+            </select>
+        </div>
+
+        <!-- Suspension Options -->
+        <div class="section">
+            <h2>Suspension</h2>
+            <select id="suspensionSelect">
+                <option value="">Select Suspension</option>
+                <option value="AA Arm Upgrade">AA Arm Upgrade</option>
+                <option value="AA Arm">AA Arm</option>
+                <option value="MacPherson Strut Upgrade">MacPherson Strut Upgrade</option>
+                <option value="MacPherson Strut">MacPherson Strut</option>
+                <option value="Leafspring">Leafspring</option>
+            </select>
+        </div>
+
+        <!-- Brakes Options -->
+        <div class="section">
+            <h2>Brakes</h2>
+            <select id="brakesSelect">
+                <option value="">Select Brakes</option>
+                <option value="Carbon Ceramics">Carbon Ceramics</option>
+                <option value="Composite">Composite</option>
+                <option value="Stainless Steel">Stainless Steel</option>
+                <option value="Drum Brakes">Drum Brakes</option>
+            </select>
+        </div>
+
+        <!-- Aero Options -->
+        <div class="section">
+            <h2>Aero</h2>
+            <select id="aeroSelect">
+                <option value="">Select Aero</option>
+                <option value="Canards">Canards</option>
+                <option value="Front Splitter">Front Splitter</option>
+                <option value="Rear Wing">Rear Wing</option>
+                <option value="Diffuser">Diffuser</option>
+            </select>
+        </div>
+
+        <!-- Differential Options -->
+        <div class="section">
+            <h2>Differential</h2>
+            <select id="differentialSelect">
+                <option value="">Select Differential</option>
+                <option value="Torque Vectoring Differential">Torque Vectoring Differential</option>
+                <option value="LSD">LSD</option>
+                <option value="Open Differential">Open Differential</option>
+                <option value="Welded">Welded</option>
+            </select>
+        </div>
+
+        <!-- Wheel Drive Options -->
+        <div class="section">
+            <h2>Wheel Drive</h2>
+            <select id="wheelDriveSelect">
+                <option value="">Select Wheel Drive</option>
+                <option value="Rear Wheel Drive">Rear Wheel Drive</option>
+                <option value="All Wheel Drive">All Wheel Drive</option>
+                <option value="Front Wheel Drive">Front Wheel Drive</option>
+            </select>
+        </div>
+
+        <!-- Aspiration Options -->
+        <div class="section">
+            <h2>Aspiration</h2>
+            <select id="aspirationSelect">
+                <option value="">Select Aspiration</option>
+                <option value="Turbo Charged">Turbo Charged</option>
+                <option value="Super Charged">Super Charged</option>
+                <option value="Twin Turbo Charged">Twin Turbo Charged</option>
+                <option value="Naturally Aspirated">Naturally Aspirated</option>
+            </select>
+        </div>
+
+        <!-- Vehicle Dynamics Options -->
+        <div class="section">
+            <h2>Vehicle Dynamics</h2>
+            <select id="vehicleDynamicsSelect">
+                <option value="">Select Vehicle Dynamics</option>
+                <option value="ARB front">ARB front</option>
+                <option value="ARB rear">ARB rear</option>
+            </select>
+        </div>
+
+        <!-- Display Car Parameters -->
+        <h3>Car Parameters</h3>
+        <div class="parameters">
+            <p>Max Speed: <span id="maxSpeed">0</span></p>
+            <p>Acceleration Multiplier: <span id="accelerationMultiplier">0</span></p>
+            <p>Steering Speed: <span id="steeringSpeed">0</span></p>
+            <p>Steering Angle: <span id="steeringAngle">0</span></p>
+            <p>Brake Force: <span id="brakeForce">0</span></p>
+            <p>Deceleration Multiplier: <span id="decelerationMultiplier">0</span></p>
+            <p>Cost: <span id="cost">0</span></p>
+        </div>
+
+        <button id="updateBtn">Update Car Parameters</button> &nbsp;&nbsp;&nbsp;&nbsp;
+        <button id="checkoutBtn">Checkout</button>
+    </div>
+
+    <script>
+        var configurations = {
+            "Engine": {
+                "V10": { max_speed: 40, acceleration_multiplier: 2, steering_speed: 5, steering_angle: 2, brake_force: 3, deceleration_multiplier: 1.5, cost: 10000 },
+                "V8": { max_speed: 30, acceleration_multiplier: 1.5, steering_speed: 4, steering_angle: 1.5, brake_force: 2.5, deceleration_multiplier: 1.2, cost: 8000 },
+                "I6": { max_speed: 20, acceleration_multiplier: 0.25, steering_speed: 3, steering_angle: 1, brake_force: 2, deceleration_multiplier: 1, cost: 6000 },
+                "V6": { max_speed: 15, acceleration_multiplier: 1, steering_speed: 3.5, steering_angle: 1.2, brake_force: 2.2, deceleration_multiplier: 1.1, cost: 5000 },
+                "I4": { max_speed: 10, acceleration_multiplier: 0.8, steering_speed: 2.5, steering_angle: 1, brake_force: 1.8, deceleration_multiplier: 0.9, cost: 4000 },
+                "I3": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 2, steering_angle: 0.8, brake_force: 1.5, deceleration_multiplier: 0.8, cost: 3000 }
+            },
+            "Transmission": {
+                "DCT": { max_speed: 30, acceleration_multiplier: 1.5, steering_speed: 4, steering_angle: 1.3, brake_force: 2.7, deceleration_multiplier: 1.3, cost: 2000 },
+                "CVT": { max_speed: 20, acceleration_multiplier: 1, steering_speed: 3, steering_angle: 1, brake_force: 2, deceleration_multiplier: 1, cost: 1500 },
+                "Torque Converter": { max_speed: 25, acceleration_multiplier: 0.5, steering_speed: 2.5, steering_angle: 0.9, brake_force: 1.8, deceleration_multiplier: 0.8, cost: 1800 },
+                "Semi Automatic transmission": { max_speed: 15, acceleration_multiplier: 1.2, steering_speed: 3.5, steering_angle: 1.1, brake_force: 2.2, deceleration_multiplier: 1.1, cost: 1200 },
+                "Manual Transmission": { max_speed: 10, acceleration_multiplier: 1, steering_speed: 3, steering_angle: 1, brake_force: 2, deceleration_multiplier: 1, cost: 1000 }
+            },
+            "Suspension": {
+                "AA Arm Upgrade": { max_speed: 10, acceleration_multiplier: 1, steering_speed: 3, steering_angle: 1, brake_force: 2, deceleration_multiplier: 1, cost: 1500 },
+                "AA Arm": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 2.5, steering_angle: 0.8, brake_force: 1.5, deceleration_multiplier: 0.8, cost: 1000 },
+                "MacPherson Strut Upgrade": { max_speed: 8, acceleration_multiplier: 0.8, steering_speed: 2.8, steering_angle: 0.9, brake_force: 1.7, deceleration_multiplier: 0.9, cost: 1200 },
+                "MacPherson Strut": { max_speed: 4, acceleration_multiplier: 0.4, steering_speed: 2, steering_angle: 0.7, brake_force: 1.2, deceleration_multiplier: 0.7, cost: 800 },
+                "Leafspring": { max_speed: 6, acceleration_multiplier: 0.6, steering_speed: 2.2, steering_angle: 0.8, brake_force: 1.5, deceleration_multiplier: 0.8, cost: 900 }
+            },
+            "Brakes": {
+                "Carbon Ceramics": { max_speed: 20, acceleration_multiplier: 1, steering_speed: 4, steering_angle: 1.2, brake_force: 3, deceleration_multiplier: 1.4, cost: 2500 },
+                "Composite": { max_speed: 15, acceleration_multiplier: 0.8, steering_speed: 3.5, steering_angle: 1.1, brake_force: 2.5, deceleration_multiplier: 1.2, cost: 2000 },
+                "Stainless Steel": { max_speed: 10, acceleration_multiplier: 0.5, steering_speed: 3, steering_angle: 1, brake_force: 2, deceleration_multiplier: 1, cost: 1500 },
+                "Drum Brakes": { max_speed: 5, acceleration_multiplier: 0.2, steering_speed: 2.5, steering_angle: 0.8, brake_force: 1.5, deceleration_multiplier: 0.8, cost: 1000 }
+            },
+            "Aero": {
+                "Canards": { max_speed: -5, acceleration_multiplier: 0.5, steering_speed: 2, steering_angle: 0.5, brake_force: 1, deceleration_multiplier: 0.5, cost: 1200 },
+                "Front Splitter": { max_speed: -10, acceleration_multiplier: 0.5, steering_speed: 1.8, steering_angle: 0.6, brake_force: 0.8, deceleration_multiplier: 0.6, cost: 1500 },
+                "Rear Wing": { max_speed: -15, acceleration_multiplier: 0.5, steering_speed: 1.5, steering_angle: 0.7, brake_force: 0.7, deceleration_multiplier: 0.7, cost: 1800 },
+                "Diffuser": { max_speed: -10, acceleration_multiplier: 0.4, steering_speed: 1.2, steering_angle: 0.6, brake_force: 0.6, deceleration_multiplier: 0.5, cost: 1600 }
+            },
+            "Differential": {
+                "Torque Vectoring Differential": { max_speed: 15, acceleration_multiplier: 1.5, steering_speed: 4, steering_angle: 1.3, brake_force: 2.8, deceleration_multiplier: 1.3, cost: 2000 },
+                "LSD": { max_speed: 10, acceleration_multiplier: 1, steering_speed: 3.5, steering_angle: 1.1, brake_force: 2.5, deceleration_multiplier: 1.2, cost: 1500 },
+                "Open Differential": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 3, steering_angle: 1, brake_force: 2, deceleration_multiplier: 1, cost: 1000 },
+                "Welded": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 2.5, steering_angle: 0.8, brake_force: 1.5, deceleration_multiplier: 0.8, cost: 500 }
+            },
+            "Wheel Drive": {
+                "Rear Wheel Drive": { max_speed: 10, acceleration_multiplier: 1, steering_speed: 3, steering_angle: 1, brake_force: 2, deceleration_multiplier: 1, cost: 1000 },
+                "All Wheel Drive": { max_speed: 20, acceleration_multiplier: 1.5, steering_speed: 4, steering_angle: 1.2, brake_force: 2.8, deceleration_multiplier: 1.3, cost: 2000 },
+                "Front Wheel Drive": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 2.5, steering_angle: 0.8, brake_force: 1.5, deceleration_multiplier: 0.8, cost: 500 }
+            },
+            "Aspiration": {
+                "Turbo Charged": { max_speed: 20, acceleration_multiplier: 2, steering_speed: 4, steering_angle: 1.3, brake_force: 3, deceleration_multiplier: 1.5, cost: 3000 },
+                "Super Charged": { max_speed: 15, acceleration_multiplier: 1.5, steering_speed: 3.5, steering_angle: 1.2, brake_force: 2.8, deceleration_multiplier: 1.3, cost: 2500 },
+                "Twin Turbo Charged": { max_speed: 25, acceleration_multiplier: 2.5, steering_speed: 4.5, steering_angle: 1.5, brake_force: 3.5, deceleration_multiplier: 1.6, cost: 3500 },
+                "Naturally Aspirated": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 2, steering_angle: 0.8, brake_force: 1.5, deceleration_multiplier: 0.8, cost: 1000 }
+            },
+            "Vehicle Dynamics": {
+                "ARB front": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 2.5, steering_angle: 1, brake_force: 1.8, deceleration_multiplier: 0.9, cost: 1200 },
+                "ARB rear": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 2.5, steering_angle: 1, brake_force: 1.8, deceleration_multiplier: 0.9, cost: 1200 }
+            }
+        };
+
+        function getSelectedOptions() {
+            var selectedOptions = {
+                "Engine": document.getElementById('engineSelect').value,
+                "Transmission": document.getElementById('transmissionSelect').value,
+                "Suspension": document.getElementById('suspensionSelect').value,
+                "Brakes": document.getElementById('brakesSelect').value,
+                "Aero": document.getElementById('aeroSelect').value,
+                "Differential": document.getElementById('differentialSelect').value,
+                "Wheel Drive": document.getElementById('wheelDriveSelect').value,
+                "Aspiration": document.getElementById('aspirationSelect').value,
+                "Vehicle Dynamics": document.getElementById('vehicleDynamicsSelect').value
+            };
+            return selectedOptions;
+        }
+
+        function encryptNumbers(numbers) {
+            // Example encryption function: Base64 encoding
+            let encodedString = btoa(numbers.join(','));
+            return encodedString;
+        }
+
+        function updateCarParameters() {
+            var selectedOptions = getSelectedOptions();
+            var parameters = {
+                max_speed: 0,
+                acceleration_multiplier: 0,
+                steering_speed: 0,
+                steering_angle: 0,
+                brake_force: 0,
+                deceleration_multiplier: 0,
+                cost: 0
+            };
+
+            for (var category in selectedOptions) {
+                var selection = selectedOptions[category];
+                if (selection && configurations[category] && configurations[category][selection]) {
+                    var config = configurations[category][selection];
+                    for (var param in parameters) {
+                        parameters[param] += config[param];
+                    }
+                }
+            }
+
+            document.getElementById('maxSpeed').textContent = parameters.max_speed;
+            document.getElementById('accelerationMultiplier').textContent = parameters.acceleration_multiplier;
+            document.getElementById('steeringSpeed').textContent = parameters.steering_speed;
+            document.getElementById('steeringAngle').textContent = parameters.steering_angle;
+            document.getElementById('brakeForce').textContent = parameters.brake_force;
+            document.getElementById('decelerationMultiplier').textContent = parameters.deceleration_multiplier;
+            document.getElementById('cost').textContent = parameters.cost;
+        }
+
+        function checkout() {
+            var parameters = {
+                max_speed: parseFloat(document.getElementById('maxSpeed').textContent),
+                acceleration_multiplier: parseFloat(document.getElementById('accelerationMultiplier').textContent),
+                steering_speed: parseFloat(document.getElementById('steeringSpeed').textContent),
+                steering_angle: parseFloat(document.getElementById('steeringAngle').textContent),
+                brake_force: parseFloat(document.getElementById('brakeForce').textContent),
+                deceleration_multiplier: parseFloat(document.getElementById('decelerationMultiplier').textContent),
+                cost: parseFloat(document.getElementById('cost').textContent)
+            };
+
+            // Convert the parameters object to an array
+            var paramsArray = Object.values(parameters);
+
+            // Encrypt the array of numbers
+            var encryptedParams = encryptNumbers(paramsArray);
+
+            // Display the encrypted parameters
+            alert(`Encrypted Parameters: ${encryptedParams}`);
+        }
+
+        document.getElementById('updateBtn').addEventListener('click', updateCarParameters);
+        document.getElementById('checkoutBtn').addEventListener('click', checkout);
+    </script>
+</body>
+</html>
