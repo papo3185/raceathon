@@ -275,6 +275,16 @@
             }
         };
 
+        var parameters = {
+                max_speed: 0,
+                acceleration_multiplier: 0,
+                steering_speed: 0,
+                steering_angle: 0,
+                brake_force: 0,
+                deceleration_multiplier: 0,
+                cost: 0
+            };
+
         function getSelectedOptions() {
             var selectedOptions = {
                 "Engine": document.getElementById('engineSelect').value,
@@ -298,15 +308,7 @@
 
         function updateCarParameters() {
             var selectedOptions = getSelectedOptions();
-            var parameters = {
-                max_speed: 0,
-                acceleration_multiplier: 0,
-                steering_speed: 0,
-                steering_angle: 0,
-                brake_force: 0,
-                deceleration_multiplier: 0,
-                cost: 0
-            };
+            
 
             for (var category in selectedOptions) {
                 var selection = selectedOptions[category];
@@ -326,7 +328,7 @@
         }
 
         function checkout() {
-            var parameters = {
+            /*var parameters = {
                 max_speed: parameters.max_speed,
                 acceleration_multiplier: parameters.acceleration_multiplier,
                 steering_speed: parameters.steering_speed,
@@ -334,7 +336,7 @@
                 brake_force: parameters.brake_force,
                 deceleration_multiplier: parameters.deceleration_multiplier,
                 cost: parseFloat(document.getElementById('cost').textContent)
-            };
+            };*/
 
             // Convert the parameters object to an array
             var paramsArray = Object.values(parameters);
