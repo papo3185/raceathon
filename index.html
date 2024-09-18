@@ -308,7 +308,10 @@
 
         function updateCarParameters() {
             var selectedOptions = getSelectedOptions();
-            
+
+            for (var param in parameters){
+                parameters[param] = 0;
+            }
 
             for (var category in selectedOptions) {
                 var selection = selectedOptions[category];
