@@ -300,12 +300,6 @@
             return selectedOptions;
         }
 
-        function encryptNumbers(numbers) {
-            // Example encryption function: Base64 encoding
-            let encodedString = btoa(numbers.join(','));
-            return encodedString;
-        }
-
         function updateCarParameters() {
             var selectedOptions = getSelectedOptions();
 
@@ -343,16 +337,14 @@
 
             // Convert the parameters object to an array
             var paramsArray = Object.values(parameters);
-
-            // Encrypt the array of numbers
-            var encryptedParams = encryptNumbers(paramsArray);
+            var encryptedParams = paramsArray.join('-');
 
             if(parameters.cost > 25000){
                 alert('The car is going over budget chief!\nTry using different combinations!');
             }
             else{
             // Display the encrypted parameters
-                alert(`Encrypted Parameters: ${encryptedParams}`);
+                alert(`Game Code: ${encryptedParams}`);
             }
         }
 
