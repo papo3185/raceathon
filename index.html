@@ -106,8 +106,8 @@
                 <option value="V8">V8 (8,000)</option>
                 <option value="I6">I6 (6,000)</option>
                 <option value="V6">V6 (6,000)</option>
-                <option value="I4">I4 (0)</option>
-                <option value="I3">I3 (-1,000)</option>
+                <option value="I4">I4 (4,000)</option>
+                <option value="I3">I3 (3,000)</option>
             </select>
         </div>
 
@@ -120,7 +120,7 @@
                 <option value="CVT">CVT (2,800)</option>
                 <option value="Torque Converter">Torque Converter (1,300)</option>
                 <option value="Semi Automatic transmission">Semi Automatic Transmission (800)</option>
-                <option value="Manual Transmission">Manual Transmission (0)</option>
+                <option value="Manual Transmission">Manual Transmission (500)</option>
             </select>
         </div>
 
@@ -132,8 +132,8 @@
                 <option value="AA Arm Upgrade">AA Arm [Upgraded] (3,500)</option>
                 <option value="AA Arm">AA Arm (2,700)</option>
                 <option value="MacPherson Strut Upgrade">MacPherson Strut [Upgraded] (1,000)</option>
-                <option value="MacPherson Strut">MacPherson Strut (0)</option>
-                <option value="Leafspring">Leafspring (-500)</option>
+                <option value="MacPherson Strut">MacPherson Strut (750)</option>
+                <option value="Leafspring">Leafspring (500)</option>
             </select>
         </div>
 
@@ -145,7 +145,7 @@
                 <option value="Carbon Ceramics">Carbon Ceramics (6,000)</option>
                 <option value="Composite">Composite (4,000)</option>
                 <option value="Stainless Steel">Stainless Steel (2,000)</option>
-                <option value="Drum Brakes">Drum Brakes (0)</option>
+                <option value="Drum Brakes">Drum Brakes (1000)</option>
             </select>
         </div>
 
@@ -168,8 +168,8 @@
                 <option value="">Select Differential</option>
                 <option value="Torque Vectoring Differential">Torque Vectoring Differential (2100)</option>
                 <option value="LSD">LSD (1800)</option>
-                <option value="Open Differential">Open Differential (0)</option>
-                <option value="Welded">Welded (-200)</option>
+                <option value="Open Differential">Open Differential (1000)</option>
+                <option value="Welded">Welded (800)</option>
             </select>
         </div>
 
@@ -178,9 +178,9 @@
             <h2>Wheel Drive</h2>
             <select id="wheelDriveSelect">
                 <option value="">Select Wheel Drive</option>
-                <option value="Rear Wheel Drive">Rear Wheel Drive (2000)</option>
-                <option value="All Wheel Drive">All Wheel Drive (3000)</option>
-                <option value="Front Wheel Drive">Front Wheel Drive (0)</option>
+                <option value="Rear Wheel Drive">Rear Wheel Drive (2,000)</option>
+                <option value="All Wheel Drive">All Wheel Drive (3,000)</option>
+                <option value="Front Wheel Drive">Front Wheel Drive (1,000)</option>
             </select>
         </div>
 
@@ -189,9 +189,9 @@
             <h2>Aspiration</h2>
             <select id="aspirationSelect">
                 <option value="">Select Aspiration</option>
-                <option value="Turbo Charged">Turbo Charged (2500)</option>
-                <option value="Super Charged">Super Charged (3000)</option>
-                <option value="Twin Turbo Charged">Twin Turbo Charged (4500)</option>
+                <option value="Turbo Charged">Turbo Charged (2,500)</option>
+                <option value="Super Charged">Super Charged (3,000)</option>
+                <option value="Twin Turbo Charged">Twin Turbo Charged (4,500)</option>
                 <option value="Naturally Aspirated">Naturally Aspirated (0)</option>
             </select>
         </div>
@@ -223,28 +223,28 @@
                 "V8": { max_speed: 30, acceleration_multiplier: 2, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 1.2, cost: 8000 },
                 "I6": { max_speed: 20, acceleration_multiplier: 0.75, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 1, cost: 6000 },
                 "V6": { max_speed: 15, acceleration_multiplier: 1.5, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 1.1, cost: 6000 },
-                "I4": { max_speed: 0, acceleration_multiplier: 0.5, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0.9, cost: 0 },
-                "I3": { max_speed: -5, acceleration_multiplier: 0.25, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0.8, cost: -1000 }
+                "I4": { max_speed: 0, acceleration_multiplier: 0.5, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0.9, cost: 4000 },
+                "I3": { max_speed: -5, acceleration_multiplier: 0.25, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0.8, cost: 3000 }
             },
             "Transmission": {
                 "DCT": { max_speed: 10, acceleration_multiplier: 2, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 3500 },
                 "CVT": { max_speed: 5, acceleration_multiplier: 1, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 2800 },
                 "Torque Converter": { max_speed: 3, acceleration_multiplier: 0.5, steering_speed: 0, steering_angle: 0, brake_force: 1.8, deceleration_multiplier: 0, cost: 1300 },
                 "Semi Automatic transmission": { max_speed: 2, acceleration_multiplier: 0.3, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 800 },
-                "Manual Transmission": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 2, deceleration_multiplier: 0, cost: 0 }
+                "Manual Transmission": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 2, deceleration_multiplier: 0, cost: 500 }
             },
             "Suspension": {
                 "AA Arm Upgrade": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0.2, steering_angle: 5, brake_force: 0, deceleration_multiplier: 0, cost: 3500 },
                 "AA Arm": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0.15, steering_angle: 4, brake_force: 0, deceleration_multiplier: 0, cost: 2700 },
                 "MacPherson Strut Upgrade": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0.1, steering_angle: 3, brake_force: 0, deceleration_multiplier: 0, cost: 1000 },
-                "MacPherson Strut": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 2, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 0 },
-                "Leafspring": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 2.2, steering_angle: -0.1, brake_force: 0, deceleration_multiplier: 0, cost: -500 }
+                "MacPherson Strut": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 2, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 750 },
+                "Leafspring": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 2.2, steering_angle: -0.1, brake_force: 0, deceleration_multiplier: 0, cost: 500 }
             },
             "Brakes": {
                 "Carbon Ceramics": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 300, deceleration_multiplier: 4, cost: 6000 },
                 "Composite": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 200, deceleration_multiplier: 3, cost: 4000 },
                 "Stainless Steel": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 100, deceleration_multiplier: 2, cost: 2000 },
-                "Drum Brakes": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 0 }
+                "Drum Brakes": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 1000 }
             },
             "Aero": {
                 "Canards": { max_speed: -3, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0.5, brake_force: 0, deceleration_multiplier: 0, cost: 650 },
@@ -255,19 +255,19 @@
             "Differential": {
                 "Torque Vectoring Differential": { max_speed: 0, acceleration_multiplier: 0.5, steering_speed: 0, steering_angle: 2, brake_force: 0, deceleration_multiplier: 0, cost: 2100 },
                 "LSD": { max_speed: 0, acceleration_multiplier: 0.25, steering_speed: 0, steering_angle: 1, brake_force: 0, deceleration_multiplier: 0, cost: 1800 },
-                "Open Differential": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 0 },
-                "Welded": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: -1, brake_force: 0, deceleration_multiplier: 0, cost: -200 }
+                "Open Differential": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 1000 },
+                "Welded": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: -1, brake_force: 0, deceleration_multiplier: 0, cost: 800 }
             },
             "Wheel Drive": {
                 "Rear Wheel Drive": { max_speed: 8, acceleration_multiplier: 1, steering_speed: 0, steering_angle: 2, brake_force: 0, deceleration_multiplier: 0, cost: 2000 },
                 "All Wheel Drive": { max_speed: 5, acceleration_multiplier: 1.5, steering_speed: 0, steering_angle: 3.5, brake_force: 0, deceleration_multiplier: 0, cost: 3000 },
-                "Front Wheel Drive": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 0 }
+                "Front Wheel Drive": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 1000 }
             },
             "Aspiration": {
-                "Turbo Charged": { max_speed: 10, acceleration_multiplier: 0.5, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 3000 },
-                "Super Charged": { max_speed: 14, acceleration_multiplier: 0.75, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 2500 },
-                "Twin Turbo Charged": { max_speed: 20, acceleration_multiplier: 1, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 3500 },
-                "Naturally Aspirated": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 1000 }
+                "Turbo Charged": { max_speed: 10, acceleration_multiplier: 0.5, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 2500 },
+                "Super Charged": { max_speed: 14, acceleration_multiplier: 0.75, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 3000 },
+                "Twin Turbo Charged": { max_speed: 20, acceleration_multiplier: 1, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 4500 },
+                "Naturally Aspirated": { max_speed: 0, acceleration_multiplier: 0, steering_speed: 0, steering_angle: 0, brake_force: 0, deceleration_multiplier: 0, cost: 0 }
             },
             "Vehicle Dynamics": {
                 "ARB front": { max_speed: 5, acceleration_multiplier: 0.5, steering_speed: 2.5, steering_angle: 1, brake_force: 1.8, deceleration_multiplier: 0.9, cost: 1200 },
