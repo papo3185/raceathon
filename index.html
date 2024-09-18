@@ -336,8 +336,10 @@
             };*/
 
             // Convert the parameters object to an array
-            var paramsArray = Object.values(parameters).slice(0, -1);
-            var encryptedParams = paramsArray.join('-');
+            var encryptedParams = "";
+            for (var param in Object.values(parameters).slice(0, -1)){
+                encryptedParams = encryptedParams + String.fromCharCode(65 + (param*10)) + "-";
+            }
 
             if(parameters.cost > 25000){
                 alert('The car is going over budget chief!\nTry using different combinations!');
