@@ -336,7 +336,7 @@
             };*/
 
             // Convert the parameters object to an array
-            var paramsArray = Object.values(parameters);
+            var paramsArray = Object.values(parameters).slice(0, -1);
             var encryptedParams = paramsArray.join('-');
 
             if(parameters.cost > 25000){
