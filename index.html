@@ -329,7 +329,7 @@
             document.getElementById('steeringAngle').textContent = parameters.steering_angle;
             document.getElementById('brakeForce').textContent = parameters.brake_force;
             document.getElementById('decelerationMultiplier').textContent = parameters.deceleration_multiplier;
-            if(parameter.cost > 25000){
+            if(parameters.cost > 25000){
                 alert('You exceded the budget! \nTry changing your configuration to be under budget.');
             }
             document.getElementById('cost').textContent = parameters.cost;
